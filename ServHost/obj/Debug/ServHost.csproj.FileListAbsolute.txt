@@ -1,0 +1,11 @@
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\bin\Debug\ServHost.exe.config
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\bin\Debug\ServHost.exe
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\bin\Debug\ServHost.pdb
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\bin\Debug\Calculator.dll
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\bin\Debug\Calculator.pdb
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\obj\Debug\ServHost.csprojResolveAssemblyReference.cache
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\obj\Debug\ServHost.exe
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServHost\obj\Debug\ServHost.pdb
+D:\НАТАША\Шаг\ДЗ\Projects\WCF\Service Calculator\ServHost\bin\Debug\ServHost.exe.config
+D:\НАТАША\Шаг\ДЗ\Projects\WCF\Service Calculator\ServHost\obj\Debug\ServHost.exe
+D:\НАТАША\Шаг\ДЗ\Projects\WCF\Service Calculator\ServHost\obj\Debug\ServHost.pdb

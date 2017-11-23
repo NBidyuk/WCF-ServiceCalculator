@@ -1,0 +1,10 @@
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\bin\Debug\ServiceHost.exe.config
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\bin\Debug\ServiceHost.exe
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\bin\Debug\ServiceHost.pdb
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\obj\Debug\ServiceClient.csprojResolveAssemblyReference.cache
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\obj\Debug\ServiceClient.Form1.resources
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\obj\Debug\ServiceHost.Properties.Resources.resources
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\obj\Debug\ServiceClient.csproj.GenerateResource.Cache
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\obj\Debug\ServiceHost.exe
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\ServiceHost\obj\Debug\ServiceHost.pdb
+D:\НАТАША\Шаг\ДЗ\Projects\WCF\Service Calculator\ServiceHost\bin\Debug\ServiceHost.exe.config

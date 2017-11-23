@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Calculator" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IEngineerCalculator_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8083/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8083/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICalculator_Sum_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sum" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Sum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Minus_InputMessage">
+    <wsdl:part name="parameters" element="tns:Minus" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Minus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MinusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Mult_InputMessage">
+    <wsdl:part name="parameters" element="tns:Mult" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Mult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Div_InputMessage">
+    <wsdl:part name="parameters" element="tns:Div" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Div_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_SquareRoot_InputMessage">
+    <wsdl:part name="parameters" element="tns:SquareRoot" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_SquareRoot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SquareRootResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Percent_InputMessage">
+    <wsdl:part name="parameters" element="tns:Percent" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Percent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PercentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Sin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sin" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Sin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Cos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cos" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Cos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Square_InputMessage">
+    <wsdl:part name="parameters" element="tns:Square" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Square_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SquareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Triple_InputMessage">
+    <wsdl:part name="parameters" element="tns:Triple" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Triple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TripleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Pow_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pow" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Pow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Tan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tan" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Tan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Factorial_InputMessage">
+    <wsdl:part name="parameters" element="tns:Factorial" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Factorial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FactorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Log_InputMessage">
+    <wsdl:part name="parameters" element="tns:Log" />
+  </wsdl:message>
+  <wsdl:message name="IEngineerCalculator_Log_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICalculator">
+    <wsdl:operation name="Sum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Sum" message="tns:ICalculator_Sum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/SumResponse" message="tns:ICalculator_Sum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Minus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Minus" message="tns:ICalculator_Minus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/MinusResponse" message="tns:ICalculator_Minus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Mult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Mult" message="tns:ICalculator_Mult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/MultResponse" message="tns:ICalculator_Mult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Div" message="tns:ICalculator_Div_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/DivResponse" message="tns:ICalculator_Div_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SquareRoot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/SquareRoot" message="tns:ICalculator_SquareRoot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/SquareRootResponse" message="tns:ICalculator_SquareRoot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Percent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Percent" message="tns:ICalculator_Percent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/PercentResponse" message="tns:ICalculator_Percent_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IEngineerCalculator">
+    <wsdl:operation name="Sin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Sin" message="tns:IEngineerCalculator_Sin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/SinResponse" message="tns:IEngineerCalculator_Sin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Cos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Cos" message="tns:IEngineerCalculator_Cos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/CosResponse" message="tns:IEngineerCalculator_Cos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Square">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Square" message="tns:IEngineerCalculator_Square_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/SquareResponse" message="tns:IEngineerCalculator_Square_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Triple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Triple" message="tns:IEngineerCalculator_Triple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/TripleResponse" message="tns:IEngineerCalculator_Triple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Pow" message="tns:IEngineerCalculator_Pow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/PowResponse" message="tns:IEngineerCalculator_Pow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Tan" message="tns:IEngineerCalculator_Tan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/TanResponse" message="tns:IEngineerCalculator_Tan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Factorial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Factorial" message="tns:IEngineerCalculator_Factorial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/FactorialResponse" message="tns:IEngineerCalculator_Factorial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Log">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEngineerCalculator/Log" message="tns:IEngineerCalculator_Log_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEngineerCalculator/LogResponse" message="tns:IEngineerCalculator_Log_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICalculator" type="tns:ICalculator">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Sum">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Sum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Minus">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Minus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mult">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Mult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Div">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Div" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SquareRoot">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/SquareRoot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Percent">
+      <soap:operation soapAction="http://tempuri.org/ICalculator/Percent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IEngineerCalculator" type="tns:IEngineerCalculator">
+    <wsp:PolicyReference URI="#NetTcpBinding_IEngineerCalculator_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Sin">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Sin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cos">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Cos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Square">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Square" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Triple">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Triple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pow">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Pow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tan">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Tan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Factorial">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Factorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Log">
+      <soap12:operation soapAction="http://tempuri.org/IEngineerCalculator/Log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Calculator">
+    <wsdl:port name="BasicHttpBinding_ICalculator" binding="tns:BasicHttpBinding_ICalculator">
+      <soap:address location="http://localhost:8083/Simple" />
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IEngineerCalculator" binding="tns:NetTcpBinding_IEngineerCalculator">
+      <soap12:address location="net.tcp://localhost:45615/Enginer" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:45615/Enginer</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>Asus\Natalie</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

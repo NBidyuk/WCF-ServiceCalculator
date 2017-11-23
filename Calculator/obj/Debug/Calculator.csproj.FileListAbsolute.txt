@@ -1,0 +1,12 @@
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\Calculator\bin\Debug\Calculator.dll.config
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\Calculator\bin\Debug\Calculator.dll
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\Calculator\bin\Debug\Calculator.pdb
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\Calculator\obj\Debug\Calculator.dll
+D:\НАТАША\Шаг\ДЗ\Projects\System programming\Calculator\obj\Debug\Calculator.pdb
+D:\НАТАША\Шаг\Homework\Projects\WCF\Service Calculator\Calculator\bin\Debug\Calculator.dll.config
+D:\НАТАША\Шаг\Homework\Projects\WCF\Service Calculator\Calculator\bin\Debug\Calculator.dll
+D:\НАТАША\Шаг\Homework\Projects\WCF\Service Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\НАТАША\Шаг\Homework\Projects\WCF\Service Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\НАТАША\Шаг\Homework\Projects\WCF\Service Calculator\Calculator\obj\Debug\Calculator.dll
+D:\НАТАША\Шаг\Homework\Projects\WCF\Service Calculator\Calculator\obj\Debug\Calculator.pdb
